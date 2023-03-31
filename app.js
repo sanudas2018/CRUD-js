@@ -10,6 +10,7 @@ let phoneDetails = {};
 const handleForm = (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
+
   const data = {
     memory: {},
     camera: {},
@@ -117,11 +118,12 @@ const displayPhones = (phonesData) => {
         </div>`;
   });
 };
-
+// eta na holeo cholbe
 const openAddPhone = () => {
   modalTitle.innerHTML = "Add A Phone";
   isEdit = false;
   const inputs = addMobileForm.getElementsByTagName("input");
+
   [...inputs].forEach((input) => {
     input.value = "";
   });
